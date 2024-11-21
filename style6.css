@@ -1,0 +1,118 @@
+/* General Styling for Body */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Center the form vertically */
+}
+
+/* Main Container */
+.container {
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Prevent elements from overflowing */
+}
+
+/* Heading Styling */
+h2 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Form Content */
+.form-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Increase spacing between form groups */
+}
+
+/* Form Group */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Spacing between label and input */
+    margin-bottom: 20px; /* Additional spacing between form groups */
+}
+
+/* Form Labels */
+.form-group label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Input Fields */
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-group input:focus {
+    border-color: #333;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* File Input Styling */
+.form-group input[type="file"] {
+    padding: 8px;
+}
+
+/* Submit Button */
+.form-group button {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.form-group button:hover {
+    background-color: #555;
+}
+
+/* Back Link Styling */
+.back-link {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.back-link a {
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.back-link a:hover {
+    color: #777;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+}

@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.order-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+}
+
+.order-header h2 {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.status {
+    font-size: 0.9em;
+    color: #ff5722;
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background-color: #ffe0cc;
+}
+
+.order-details p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.order-items h3 {
+    margin: 10px 0;
+    color: #333;
+}
+
+.order-items ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.order-items li {
+    color: #666;
+    margin-bottom: 4px;
+}

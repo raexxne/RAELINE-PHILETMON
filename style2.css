@@ -1,0 +1,310 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  transition: color 0.3s ease;
+}
+
+.container nav ul li a:hover {
+  color:darkgray; 
+}
+
+.header {
+  background:transparent;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.header nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.header nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+body {
+  background-color: #333;
+  background-size:cover;
+  background-position: center;
+}
+
+.center-img {
+  display: block;
+  margin: 0 auto 0px; 
+  max-width: 830px; 
+}
+
+.hero {
+  background: url('burger-hero.jpg') no-repeat center center/cover;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background: #e63946;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn nav ul li a:hover {
+  color:rgb(41, 15, 15); 
+}
+
+.menu {
+  background: #f4f4f4;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.menu h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.menu-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Center items and add space between them */
+  gap: 20px; /* Space between items */
+  margin-top: 30px;
+}
+
+.item {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.item:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: #f7f7f7; /* Light background color on hover */
+}
+
+.item:active {
+  transform: scale(0.98); /* Slightly "presses" down when clicked */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.item:hover img {
+  transform: scale(1.05); /* Zoom-in effect on image hover */
+}
+
+.item h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.item:hover h3 {
+  color: #e63946; /* Change title color on hover */
+}
+
+.item p {
+  margin: 10px 0;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.price {
+  color: #e63946;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.item button {
+  background-color: #e63946;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.item button:hover {
+  background-color: #d02f3a; /* Darker red on hover */
+}
+
+.item button:active {
+  transform: scale(0.95); /* Slightly reduce button size when clicked */
+}
+
+.contact {
+  padding: 50px 0;
+  background: #fff;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact input, .contact textarea {
+  width: 60%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact button {
+  background: #e63946;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer p {
+  font-size: 1rem;
+}
+
+footer {
+  background-color: #4d1a00; /* Dark brown color */
+  color: #fff;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-section {
+  display: inline-block;
+  vertical-align: top;
+  width: 22%;
+  margin-right: 2%;
+}
+
+.footer-section h4 {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 5px 0;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-icons img {
+  width: 60px; 
+  height: 60px; 
+  margin-right: 8px; 
+  vertical-align: middle; 
+}
+
+.social-icons a {
+  margin-right: 8px; /* Space between icons */
+}
+
+.social-icons a i {
+  font-size: 24px; /* Set the size of Font Awesome icons */
+  color: #fff; /* Set the icon color */
+}
+
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 1.2em;
+  margin: 0 8px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #ddd;
+}

@@ -1,0 +1,98 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f7f7f7;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main container styling */
+.checkout-container {
+    width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Checkout items list */
+.checkout-items {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* Checkout totals section */
+.checkout-totals {
+    text-align: center;
+}
+
+.checkout-totals p {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Button styles */
+.checkout-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.checkout-btn,
+.cancel-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+/* Primary button */
+.checkout-btn {
+    background-color: #333;
+    color: #fff;
+}
+
+.checkout-btn:hover {
+    background-color: black;
+}
+
+/* Secondary button */
+.cancel-btn {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.cancel-btn:hover {
+    background-color: #b02a37;
+}
+
+/* Scrollbar styling for checkout items */
+.checkout-items::-webkit-scrollbar {
+    width: 6px;
+}
+
+.checkout-items::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    border-radius: 5px;
+}

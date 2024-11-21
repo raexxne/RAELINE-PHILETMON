@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Burgers</title>
+    <link rel="stylesheet" href="style2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1>BURGER QUEEN</h1>
+            <nav>
+                <ul>
+                    <li><b><a href="index.html">Home</a></b></li>
+                    <li><b><a href="burgers.html">Burgers</a></b></li>
+                    <li><b><a href="sides.html">Sides</a></b></li>
+                    <li><b><a href="meals.html">Meals</a></b></li>
+                    <li><b><a href="beverage.html">Beverage</a></b></li>
+                    <li><b><a href="sauces.html">Sauces</a></b></li>
+                    <li class="login-link"><b><a href="login.html">Log in</a></b></li>
+                    <li>
+                        <a class="cart" href="yourcart.html">
+                            <i class="fas fa-shopping-cart"></i> <span id="cart-total">RM0.00</span>
+                        </a>    
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="menu-container">
+        <section id="menu" class="menu">
+            <div class="container">
+                <h2>BURGERS</h2>
+                <div class="menu-items">
+                    <div class="item">
+                        <img src="images/img1.png" alt="Ultimate American Cheeseburger">
+                        <h3>Ultimate American Cheeseburger</h3>
+                        <p>1/4 Pound Beef Patty + American Cheese + Lettuce + Pickles + Caramelised Onions + BB Secret Aioli.</p>
+                        <p class="price">RM16.90</p>
+                        <button class="add-to-cart" data-name="Ultimate American Cheeseburger" data-price="16.90">ADD TO CART</button>
+                    </div>
+                    <div class="item">
+                        <img src="images/img2.png" alt="Double Beef-Streaky Jam Cheeseburger">
+                        <h3>Double Beef-Streaky Jam Cheeseburger</h3>
+                        <p>2 x 1/4 Pound Beef Patties + Beef Streaks Jam + 2 x American Cheese + Beef Streaks + Onion Rings + Carolina Mustard BBQ + BB Garlic Aioli.</p>
+                        <p class="price">RM29.90</p>
+                        <button class="add-to-cart" data-name="Double Beef-Streaky Jam Cheeseburger" data-price="29.90">ADD TO CART</button>
+                    </div>
+                    <div class="item">
+                        <img src="images/img3.png" alt="Swiss Mushroom Truffled Burger">
+                        <h3>Swiss Mushroom Truffled Burger</h3>
+                        <p>1/4 Pound Beef Patty + Black Truffle Sprinkle + 2 x Swiss Cheese + Sautéed Mushrooms + Lettuce + Caramalised Onions + BB Garlic Aioli + Honey BBQ.</p>
+                        <p class="price">RM22.90</p>
+                        <button class="add-to-cart" data-name="Swiss Mushroom Truffled Burger" data-price="22.90">ADD TO CART</button>
+                    </div>
+                    <div class="item">
+                        <img src="images/img4.png" alt="Swiss Onion Truffled Chicken Burger">
+                        <h3>Swiss Onion Truffled Chicken Burger</h3>
+                        <p>Crispy Chicken Breast Fillet (Buttermilk brined) + Caramelised Onions + Chicken Streaks + Lettuce + Tomatoes + Black Truffle Sprinkle +  Swiss Cheese + BB Garlic Aioli.</p>
+                        <p class="price">RM24.90</p>
+                        <button class="add-to-cart" data-name="Swiss Onion Truffled Chicken Burger" data-price="24.90">ADD TO CART</button>
+                    </div>
+                    <div class="item">
+                        <img src="images/img13.png" alt="Buttermilk Royale Crispy Chicken Sandwich">
+                        <h3>Buttermilk Royale Crispy Chicken Sandwich</h3>
+                        <p>Crispy Chicken Fillet (Buttermilk brined) + Chicken Streaks + BB Garlic Aioli + Caramelised Onions + Lettuce + Tomatoes + American Cheese + Sweet BBQ.</p>
+                        <p class="price">RM20.90</p>
+                        <button class="add-to-cart" data-name="Buttermilk Royale Crispy Chicken Sandwich" data-price="20.90">ADD TO CART</button>
+                    </div>
+                    <div class="item">
+                        <img src="images/img14.webp" alt="The Juicy Lucy Burger">
+                        <h3>The Juicy Lucy Burger</h3>
+                        <p>Cheddar Cheese Stuffed Beef Patty + Pickles + Onions + Tomatoes + Lettuce + Carolina Mustard BBQ + BB Secret Aioli.</p>
+                        <p class="price">RM24.90</p>
+                        <button class="add-to-cart" data-name="The Juicy Lucy Burger" data-price="24.90">ADD TO CART</button>
+                    </div>
+                    <div class="item">
+                        <img src="images/img15.png" alt="Beef-Streaky Cheeseburger">
+                        <h3>Beef-Streaky Cheeseburger</h3>
+                        <p>1/4 Pound Beef Patty + Beef Streaks + Pickles + 2 x Sharp Cheddar + Carolina Mustard BBQ + Caramalised Onions + Lettuce + BB Garlic Aioli.</p>
+                        <p class="price">RM17.90</p>
+                        <button class="add-to-cart" data-name="Beef-Streaky Cheeseburger" data-price="17.90">ADD TO CART</button>
+                    </div>
+                    <div class="item">
+                        <img src="images/img16.png" alt="Fruta Cubana Cheeseburger">
+                        <h3>Fruta Cubana Cheeseburger</h3>
+                        <p>Try one of the best burgers in the world, CUBAN style 1/4 Pound Beef Patty + Sharp Cheddar + Piri-Piri Spiced Fries + Jalapeno + BB Secret Aioli + Mustard Mayo.</p>
+                        <p class="price">RM22.00</p>
+                        <button class="add-to-cart" data-name="Fruta Cubana Cheeseburger" data-price="22.00">ADD TO CART</button>
+                    </div>
+                    <div class="item">
+                        <img src="images/img17.png" alt="Smokehouse Lamb Cheeseburger">
+                        <h3>Smokehouse Lamb Cheeseburger</h3>
+                        <p>2 x 1/4 Pound Lamb Patty + Chicken Streaks + Onion Rings + Caramalised Onions + BB Secret Aioli + American Cheese + Carolina Mustard BBQ.</p>
+                        <p class="price">RM40.90</p>
+                        <button class="add-to-cart" data-name="Smokehouse Lamb Cheeseburger" data-price="40.90">ADD TO CART</button>
+                    </div>
+                    <div class="item">
+                        <img src="images/img18.png" alt="Grilled Chicken Club Sandwich">
+                        <h3>Grilled Chicken Club Sandwich</h3>
+                        <p>Grilled Chicken + Chicken Streaks + Swiss Cheese + Lettuce + Tomatoes + BB Garlic Aioli.</p>
+                        <p class="price">RM18.90</p>
+                        <button class="add-to-cart" data-name="Grilled Chicken Club Sandwich" data-price="18.90">ADD TO CART</button>
+                    </div>
+                    <div class="item">
+                        <img src="images/img19.webp" alt="Meatless Hawaiian Cheeseburger">
+                        <h3>Meatless Hawaiian Cheeseburger</h3>
+                        <p>1/4 Meatless Meat Patty + Organic Honey + Grilled Pineapple + Onions + Lettuce + Vegan Mozzarella + Hot Sauce.</p>
+                        <p class="price">RM23.90</p>
+                        <button class="add-to-cart" data-name="Meatless Hawaiian Cheeseburger" data-price="23.90">ADD TO CART</button>
+                    </div>
+                    <div class="item">
+                        <img src="images/img20.png" alt="Big Kahuni Teriyaki Cheeseburger">
+                        <h3>Big Kahuni Teriyaki Cheeseburger</h3>
+                        <p>1/4 Pound Beef Patty + Beef Streaks + Teriyaki Sauce + Grilled Pineapple + Onions + Lettuce + American Cheddar + BB Secret Aioli.</p>
+                        <p class="price">RM21.70</p>
+                        <button class="add-to-cart" data-name="Big Kahuni Teriyaki Cheeseburger" data-price="21.70">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="cart.js"></script>
+</body>
+</html>

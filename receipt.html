@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Receipt</title>
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background-color: #eef2f7;
+            padding: 20px;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            transition: transform 0.3s ease;
+        }
+        .container:hover {
+            transform: scale(1.02);
+        }
+        h1 {
+            text-align: center;
+            color: #34495e;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        h3 {
+            color: #2c3e50;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .receipt {
+            margin-bottom: 20px;
+        }
+        .receipt-items {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .receipt-item {
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #555;
+            display: flex;
+            justify-content: space-between;
+        }
+        .receipt-total {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            text-align: right;
+        }
+        .qr-code {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .qr-code img {
+            max-width: 150px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            font-size: 14px;
+            color: #2c3e50;
+            margin-bottom: 5px;
+            display: block;
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            background-color: #f9f9f9;
+            transition: all 0.3s ease;
+        }
+        input:focus, textarea:focus {
+            border-color: #3498db;
+            outline: none;
+            background-color: #fff;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        button:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }
+        .back-link {
+            margin-top: 15px;
+            text-align: center;
+        }
+        .back-link a {
+            color: #3498db;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .back-link a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            .receipt-total {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Order Receipt</h1>
+    <div class="receipt">
+        <h3>Items</h3>
+        <ul id="receipt-items" class="receipt-items"></ul>
+        <h3>Total: <span id="receipt-total" class="receipt-total">RM0.00</span></h3>
+    </div>
+    <div class="qr-code">
+        <h3>Scan QR Code</h3>
+        <img src="images/img51.jpg" alt="QR Code" id="qr-code-img">
+    </div>
+    <h3>Customer Details</h3>
+    <form id="order-form" action="orders.php" method="POST">
+        <label for="user-name">Name:</label>
+        <input type="text" name="customerName" id="user-name" required>
+        
+        <label for="user-phone">Phone:</label>
+        <input type="text" name="customerPhone" id="user-phone" required pattern="\d+">
+        
+        <label for="user-address">Address:</label>
+        <textarea name="customerAddress" id="user-address" required></textarea>
+
+        <input type="hidden" name="cart" id="cart-data">
+        <button type="submit">Confirm Order</button>
+    </form>
+    <div class="back-link">
+        <a href="index.html">← Back</a>
+    </div>
+</div>
+<script>
+    function loadReceipt() {
+        try {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const total = parseFloat(localStorage.getItem('cartTotal')) || 0.00;
+
+            const receiptItemsContainer = document.getElementById('receipt-items');
+            const receiptTotal = document.getElementById('receipt-total');
+
+            receiptItemsContainer.innerHTML = '';
+            cart.forEach(item => {
+                const itemTotal = (item.price * item.quantity).toFixed(2);
+                const receiptItem = document.createElement('li');
+                receiptItem.classList.add('receipt-item');
+                receiptItem.innerHTML = `<span>${item.name} (x${item.quantity})</span> <span>RM${itemTotal}</span>`;
+                receiptItemsContainer.appendChild(receiptItem);
+            });
+
+            receiptTotal.innerText = `RM${total.toFixed(2)}`;
+        } catch (error) {
+            console.error("Failed to load cart data:", error);
+        }
+    }
+
+    function updateCartData() {
+        try {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            document.getElementById('cart-data').value = JSON.stringify(cart);
+        } catch (error) {
+            console.error("Failed to update cart data:", error);
+        }
+    }
+
+    document.getElementById('order-form').addEventListener('submit', () => {
+        updateCartData();
+        localStorage.clear();
+    });
+
+    window.addEventListener('load', loadReceipt);
+</script>
+</body>
+</html>

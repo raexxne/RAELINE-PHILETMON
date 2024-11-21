@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="style5.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<main class="checkout-container">
+        <h2>Your Order</h2>
+        <div id="checkout-items" class="checkout-items"></div>
+        <div class="checkout-totals">
+            <p><strong>Total: <span id="checkout-total">RM0.00</span></strong></p>
+            <div class="checkout-buttons">
+                <button id="place-order" class="checkout-btn">Place Order</button>
+                <button id="cancel-order" class="cancel-btn">Cancel Order</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="checkout.js"></script>
+    <script src="receipt.js"></script>
+</body>
+</html>

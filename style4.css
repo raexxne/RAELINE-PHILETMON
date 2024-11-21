@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #dfdfdf;
+}
+.login-box{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 440px;
+    height: 480px;
+    padding: 30px;
+}
+.login-header{
+    text-align: center;
+    margin: 20px 0 40px 0;
+}
+.login-header header{
+    color: #333;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.signup-box{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 440px;
+    height: 480px;
+    padding: 30px;
+}
+.signup-header{
+    text-align: center;
+    margin: 20px 0 40px 0;
+}
+.signup-header header{
+    color: #333;
+    font-size: 30px;
+    font-weight: 600;
+}
+.input-box .input-field{
+    width: 100%;
+    height: 60px;
+    font-size: 17px;
+    padding: 0 25px;
+    margin-bottom: 15px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0px 5px 10px 1px rgba(0,0,0, 0.05);
+    outline: none;
+    transition: .3s;
+}
+::placeholder{
+    font-weight: 500;
+    color: #222;
+}
+.input-field:focus{
+    width: 105%;
+}
+.forgot{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+section{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #555;
+}
+#check{
+    margin-right: 10px;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+section a{
+    color: #555;
+}
+.input-submit{
+    position: relative;
+}
+.submit-btn{
+    width: 100%;
+    height: 60px;
+    background: #222;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s;
+}
+.input-submit label{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    color: #fff;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+.submit-btn:hover{
+    background: #000;
+    transform: scale(1.05,1);
+}
+.sign-up-link{
+    text-align: center;
+    font-size: 15px;
+    margin-top: 20px;
+}
+.sign-up-link a{
+    color: #000;
+    font-weight: 600;
+}
+/* Center the terms section */
+.terms {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+/* Style the checkbox */
+.terms input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+    accent-color: none; /* Green checkbox color */
+}
+
+/* Style the label */
+.terms label {
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+}
+.terms label:hover {
+    color: grey;
+}
+.login-link{
+    text-align: center;
+    font-size: 15px;
+    margin-top: 20px;
+}
+.login-link a{
+    color: #000;
+    font-weight: 600;
+}
+
+.forgot-password-box {
+    background: #fff;
+    border-radius: 8px;
+    padding: 30px 40px;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* Header */
+.forgot-password-header header {
+    color: #333;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Description */
+.description {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+/* Email Label */
+.email-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Input Field */
+.input-box .input-field {
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    padding: 0 15px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: .3s;
+}
+
+.input-field:focus {
+    border-color: #333;
+}
+
+/* Submit Button */
+.input-submit {
+    text-align: right;
+}
+
+.submit-btn {
+    width: 100%;
+    height: 50px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.submit-btn:hover {
+    background: #555;
+}
+
+/* Back Link */
+.back-link {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.back-link a {
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.back-link a:hover {
+    text-decoration: underline;
+}
